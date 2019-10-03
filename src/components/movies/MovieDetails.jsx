@@ -53,11 +53,11 @@ const MovieDetails = props => {
             <h2> Ratings </h2>
             <div className='ratings-source'>
               {movie && movie.Ratings.length !== 0 ? (
-                movie.Ratings.map(rating => {
+                movie.Ratings.map((rating, idx) => {
                   let value =
                     rating.Value.replace(/[^0-9]/g, '').slice(0, 2) / 20;
                   return (
-                    <div>
+                    <div key={idx}>
                       <label>{rating.Source}</label>
                       <StarRatings
                         rating={value}
