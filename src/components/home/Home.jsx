@@ -1,10 +1,10 @@
 import React, { useState, Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Search from '../search/Search';
 import Card from '../home/movie-cards/Card';
 import Error from '../search/validation/Error/Error';
 import Load from '../search/validation/Loading/Load';
-import { Redirect } from 'react-router-dom';
 
 const Home = () => {
   const [query, setQuery] = useState('');
@@ -46,6 +46,7 @@ const Home = () => {
       : (setClasses('header'), setSearchClass('search'), setError(true));
   };
 
+  //handles redirect to movie details
   const redirectHandler = id => {
     setRedirect(id);
   };

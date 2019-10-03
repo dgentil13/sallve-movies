@@ -1,5 +1,5 @@
 .movie {
-  margin: 6rem;
+  margin: 5rem 12rem;
   .movie-header {
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 
       span {
         font-weight: 800;
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-family: mirador;
       }
       button {
@@ -40,6 +40,7 @@
       justify-content: space-between;
       padding-top: 1rem;
       flex-wrap: wrap;
+      font-size: 1.1rem;
 
       .awards {
         width: 20%;
@@ -58,19 +59,20 @@
     flex-wrap: wrap;
 
     img {
-      width: 45vh;
+      width: 48vh;
       object-fit: contain;
       padding-right: 3rem;
     }
 
     .movie-data {
       width: 45%;
+      font-size: 18px;
 
       label {
         font-family: 'Poppins', sans-serif;
         background-color: #d8ff6e;
         padding: 0 10px 0 1px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
 
       .ratings {
@@ -93,7 +95,164 @@
           flex-direction: column;
           justify-content: center;
           padding: 0 10px;
+          .star-ratings {
+            padding-top: 10px;
+          }
         }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+@media (max-width: 600px) {
+  .movie {
+    margin: 1rem;
+    .movie-header {
+      .movie-title {
+        display: flex;
+        justify-content: center;
+        span {
+          font-size: 3rem;
+        }
+        button {
+          position: fixed;
+          height: 2.5rem;
+          width: 4.5rem;
+          right: 0;
+          top: 5rem;
+        }
+      }
+
+      .movie-sub {
+        @include flexCenter(center);
+        flex-wrap: wrap;
+        padding-top: 0;
+        font-size: 15px;
+        .awards {
+          width: 100%;
+        }
+      }
+    }
+    .movie-info {
+      @include flexCenter(center);
+      padding: 1rem;
+
+      img {
+        padding: 0;
+      }
+
+      .movie-data {
+        width: 100%;
+        padding-top: 1rem;
+        label {
+          font-size: 1rem;
+        }
+        .ratings {
+          padding: 5px 0px 30px 0;
+          margin-top: 1rem;
+          h2 {
+            justify-content: start;
+          }
+
+          div {
+            flex-wrap: wrap;
+            padding-top: 10px;
+            justify-content: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .movie {
+    margin: 2rem;
+    .movie-header {
+      .movie-title {
+        display: flex;
+        justify-content: center;
+        span {
+          text-align: center;
+        }
+        button {
+          position: fixed;
+          height: 2.5rem;
+          width: 4.5rem;
+          right: 0;
+          top: 8rem;
+        }
+      }
+
+      .movie-sub {
+        @include flexCenter(center);
+        flex-wrap: wrap;
+        padding-top: 0;
+        font-size: 15px;
+        .awards {
+          width: 100%;
+        }
+      }
+    }
+    .movie-info {
+      @include flexCenter(center);
+      padding: 2rem;
+
+      img {
+        padding: 0;
+      }
+
+      .movie-data {
+        width: 100%;
+        padding-top: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .movie {
+    margin: 3rem;
+    .movie-header {
+      .movie-title {
+        display: flex;
+        justify-content: center;
+        span {
+          text-align: center;
+        }
+        button {
+          position: fixed;
+          height: 2.5rem;
+          width: 4.5rem;
+          right: 0;
+          top: 8rem;
+        }
+      }
+
+      .movie-sub {
+        @include flexCenter(center);
+        flex-wrap: wrap;
+        padding-top: 0;
+        font-size: 18px;
+        .awards {
+          width: 100%;
+        }
+      }
+    }
+    .movie-info {
+      @include flexCenter(center);
+      padding: 2rem;
+
+      img {
+        width: 55vh;
+      }
+
+      .movie-data {
+        font-size: 18px;
+        width: 80%;
+        padding-top: 2rem;
       }
     }
   }

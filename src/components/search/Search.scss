@@ -9,14 +9,6 @@
     padding-left: 2rem;
     line-height: 20px;
     font-size: 1rem;
-    // &::placeholder {
-    //   background-image: url(/images/lupa.svg);
-    //   background-repeat: no-repeat;
-    //   background-size: 2rem;
-    //   height: 3rem;
-    //   padding-left: 1rem;
-    // }
-
     &:focus {
       outline: none;
     }
@@ -38,9 +30,7 @@
 }
 
 .search--small {
-  // @include flexCenter(center);
   width: 30%;
-
   input {
     height: 2rem;
     width: 70%;
@@ -65,6 +55,59 @@
     font-family: 'Poppins', sans-serif;
     &:hover {
       background-color: #9f77ff;
+    }
+  }
+}
+
+//Media Queries
+@media (max-width: 600px) {
+  .search {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button {
+      margin-top: 2rem;
+    }
+  }
+
+  .search--small {
+    width: 80%;
+    @include flexCenter(center);
+    input {
+      width: 55%;
+    }
+
+    button {
+      height: 2rem;
+      width: 4rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .search--small {
+    width: 50%;
+    @include flexCenter(center);
+    input {
+      width: 100%;
+    }
+
+    button {
+      height: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .search--small {
+    width: 50%;
+    @include flexCenter(center);
+    input {
+      width: 60%;
+    }
+
+    button {
+      height: 2.5rem;
     }
   }
 }

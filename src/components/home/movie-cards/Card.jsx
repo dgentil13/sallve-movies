@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Card = ({ poster, redirect, id }) => {
   return (
     <div className='card' onClick={() => redirect(id)}>
-      <img src={poster} />
+      <img src={poster} alt='Poster' />
       <div className='card-overlay'>
         <p> See Details</p>
       </div>
@@ -12,8 +12,9 @@ const Card = ({ poster, redirect, id }) => {
   );
 };
 
-// Card.propTypes = {
-//   name: PropTypes.string,
-// };
+Card.propTypes = {
+  poster: PropTypes.string,
+  redirect: PropTypes.func,
+};
 
 export default Card;

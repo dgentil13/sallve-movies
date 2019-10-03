@@ -110,3 +110,58 @@
     color: #d8ff6e;
   }
 }
+
+//Media Queries
+
+@media (max-width: 600px) {
+  .header {
+    text-align: center;
+    .header-search {
+      h1 {
+        font-size: 5.5rem;
+      }
+    }
+  }
+  .header--small {
+    .header-search {
+      text-align: center;
+      flex-direction: column;
+      h1 {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header--small {
+    padding: 0 3rem;
+    .header-search {
+      h1 {
+        width: 30%;
+        font-size: 3rem;
+      }
+    }
+  }
+  .card-box {
+    @include flexCenter(center);
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header--small {
+    padding: 0 3rem;
+    .header-search {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+  .card-box {
+    @include flexCenter(center);
+    padding: 0;
+    flex-wrap: wrap;
+  }
+}

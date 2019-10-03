@@ -4,8 +4,7 @@
 
   img {
     width: 40vh;
-    height: 60vh;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .card-overlay {
@@ -34,6 +33,25 @@
   &:hover {
     .card-overlay {
       opacity: 1;
+    }
+  }
+}
+
+//Media Queries
+
+@media (max-width: 600px) {
+  .card {
+    img {
+      width: 30vh;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    img {
+      width: 35vh;
     }
   }
 }

@@ -1,5 +1,4 @@
-// import PropTypes from 'prop-types';
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import StarRatings from 'react-star-ratings';
 import { Link } from 'react-router-dom';
@@ -80,9 +79,5 @@ const MovieDetails = props => {
     </div>
   );
 };
-
-// Card.propTypes = {
-//   name: PropTypes.string,
-// };
 
 export default MovieDetails;
