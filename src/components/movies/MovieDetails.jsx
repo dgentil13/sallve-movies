@@ -8,7 +8,9 @@ const MovieDetails = props => {
 
   useEffect(() => {
     axios
-      .get(`http://www.omdbapi.com/?i=${props.match.params.id}&apikey=a5f7ff9b`)
+      .get(
+        `https://www.omdbapi.com/?i=${props.match.params.id}&apikey=a5f7ff9b`,
+      )
       .then(res => {
         setMovie(res.data);
       })

@@ -20,7 +20,7 @@ const Home = () => {
     e.preventDefault();
     setLoading(true);
     axios
-      .get(`http://www.omdbapi.com/?s=${query}&apikey=a5f7ff9b`)
+      .get(`https://www.omdbapi.com/?s=${query}&apikey=a5f7ff9b`)
       .then(res => {
         setLoading(false);
         setMovies(res.data);
