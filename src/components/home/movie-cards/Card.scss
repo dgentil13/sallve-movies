@@ -1,0 +1,39 @@
+.card {
+  position: relative;
+  margin: 10px;
+
+  img {
+    width: 40vh;
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .card-overlay {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #431e52ab;
+
+    p {
+      @include flexCenter(center);
+
+      text-transform: uppercase;
+      background-color: greenyellow;
+      width: 8rem;
+      height: 2rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+
+  &:hover {
+    .card-overlay {
+      opacity: 1;
+    }
+  }
+}

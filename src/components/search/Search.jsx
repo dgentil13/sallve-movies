@@ -3,20 +3,18 @@ import PropTypes from 'prop-types';
 
 const Search = props => {
   return (
-    <div className='search'>
-      <form onSubmit={props.submitHandler}>
-        <input
-          type='text'
-          placeholder='find a movie'
-          value={props.query}
-          onChange={props.changeHandler}
-        />
-        <button type='submit'>
-          {/* <img src='./images/search-solid.svg' alt='magnifying glass' /> */}
-          SEARCH
-        </button>
-      </form>
-    </div>
+    <form onSubmit={props.submitHandler} className={props.classe}>
+      <input
+        type='text'
+        placeholder='find a movie'
+        value={props.query}
+        onChange={props.changeHandler}
+      />
+      <button type='submit'>
+        {/* <img src='./images/search-solid.svg' alt='magnifying glass' /> */}
+        search
+      </button>
+    </form>
   );
 };
 

@@ -1,0 +1,112 @@
+@font-face {
+  font-family: mirador;
+  src: url(/src/styles/mirador.otf);
+}
+.header {
+  @include flexCenter(center);
+  height: 100vh;
+  flex-direction: column;
+
+  .header-search {
+    h1 {
+      font-family: mirador;
+      font-size: 7rem;
+      margin-top: 0;
+
+      span {
+        -webkit-animation: color-change 6s infinite;
+        -moz-animation: color-change 6s infinite;
+        animation: color-change 6s infinite;
+      }
+    }
+  }
+}
+
+.header--small {
+  @include flexCenter(center);
+
+  .header-search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    @include flexCenter(space-around);
+
+    h1 {
+      font-family: mirador;
+      font-size: 3.3rem;
+      span {
+        -webkit-animation: color-change 6s infinite;
+        -moz-animation: color-change 6s infinite;
+        animation: color-change 6s infinite;
+      }
+    }
+  }
+}
+
+.card-box {
+  @include flexCenter(flex-start);
+  padding: 5%;
+  flex-wrap: wrap;
+}
+// Logo animation
+@-webkit-keyframes color-change {
+  0% {
+    color: #9f77ff;
+  }
+  20% {
+    color: #fe5131;
+  }
+  40% {
+    color: #fdaaff;
+  }
+  60% {
+    color: #98c1ff;
+  }
+  80% {
+    color: #ffc8b4;
+  }
+  100% {
+    color: #d8ff6e;
+  }
+}
+@-moz-keyframes color-change {
+  0% {
+    color: #9f77ff;
+  }
+  20% {
+    color: #fe5131;
+  }
+  40% {
+    color: #fdaaff;
+  }
+  60% {
+    color: #98c1ff;
+  }
+  80% {
+    color: #ffc8b4;
+  }
+  100% {
+    color: #d8ff6e;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #9f77ff;
+  }
+  20% {
+    color: #fe5131;
+  }
+  40% {
+    color: #fdaaff;
+  }
+  60% {
+    color: #98c1ff;
+  }
+  80% {
+    color: #ffc8b4;
+  }
+  100% {
+    color: #d8ff6e;
+  }
+}

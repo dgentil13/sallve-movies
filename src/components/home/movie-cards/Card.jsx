@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 const Card = ({ poster, redirect, id }) => {
   return (
     <div className='card' onClick={() => redirect(id)}>
-      <div className='card-body'>
-        <img src={poster} />
+      <img src={poster} />
+      <div className='card-overlay'>
+        <p> See Details</p>
       </div>
     </div>
   );

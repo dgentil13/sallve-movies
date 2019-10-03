@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin flexCenter($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@import './components/home/Home.scss';
+@import './components/search/Search.scss';
+@import './components/home/movie-cards/Card.scss';
+@import './components/movies/MovieDetails.scss';

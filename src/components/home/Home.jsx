@@ -10,6 +10,7 @@ const Home = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState('');
   const [classes, setClasses] = useState('header');
+  const [searchClass, setSearchClass] = useState('search');
   const [loading, setLoading] = useState(false);
   const [redirect, setRedirect] = useState('');
   const [error, setError] = useState(false);
@@ -41,8 +42,8 @@ const Home = () => {
   // handles header class and error message
   const changeClasses = movieSearch => {
     return movieSearch === 'True'
-      ? setClasses('header--small')
-      : (setClasses('header'), setError(true));
+      ? (setClasses('header--small'), setSearchClass('search--small'))
+      : (setClasses('header'), setSearchClass('search'), setError(true));
   };
 
   const redirectHandler = id => {
@@ -55,35 +56,44 @@ const Home = () => {
   return (
     <Fragment>
       <section className={classes}>
-        <div className='search-side'>
-          <h4>SALLVE MOVIES</h4>
+        <div className='header-search'>
+          <h1>
+            <span>Sallve </span>Movies
+          </h1>
           <Search
             query={query}
             submitHandler={submitHandler}
             changeHandler={changeHandler}
+            classe={searchClass}
           />
         </div>
-      </section>
-      <section>
-        {/* SEARCH RESULT IMAGES */}
-        {movies.Search &&
-          movies.Search.map((elem, idx) => {
-            return (
-              <Card
-                key={idx}
-                id={elem.imdbID}
-                poster={elem.Poster}
-                redirect={redirectHandler}
-              />
-            );
-          })}
+        <div>
+          {/* LOADING */}
+          {loading && <Load />}
 
-        {/* LOADING */}
-        {loading && <Load />}
-
-        {/* ERROR */}
-        {error && <Error message={movies.Error} />}
+          {/* ERROR */}
+          {error && <Error message={movies.Error} />}
+        </div>
       </section>
+
+      {movies.Search ? (
+        <section>
+          {/* SEARCH RESULT IMAGES */}
+          <div className='card-box'>
+            {movies.Search &&
+              movies.Search.map((elem, idx) => {
+                return (
+                  <Card
+                    key={idx}
+                    id={elem.imdbID}
+                    poster={elem.Poster}
+                    redirect={redirectHandler}
+                  />
+                );
+              })}
+          </div>
+        </section>
+      ) : null}
     </Fragment>
   );
 };
