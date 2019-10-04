@@ -167,9 +167,9 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .movie {
-    margin: 2rem;
+    margin: 1rem;
     .movie-header {
       .movie-title {
         display: flex;
@@ -212,9 +212,9 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 901px) and (max-width: 1300px) {
   .movie {
-    margin: 3rem;
+    margin: 1rem;
     .movie-header {
       .movie-title {
         display: flex;

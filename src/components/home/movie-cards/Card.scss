@@ -48,7 +48,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .card {
     img {
       width: 35vh;

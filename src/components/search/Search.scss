@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .search--small {
     width: 50%;
     @include flexCenter(center);
@@ -98,7 +98,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 901px) and (max-width: 1300px) {
   .search--small {
     width: 50%;
     @include flexCenter(center);
