@@ -1,10 +1,8 @@
-Sallve Front-End Test
-===
+# Sallve Front-End Test
 
 ## Project Link
 
 https://movies-sallve.herokuapp.com/
-
 
 ## Instructions
 
@@ -16,23 +14,23 @@ To run this project:
 ```
 docker build -t sallve-movies .
 ```
+
 3. Then run **docker run** to run the container, using the following command:
 
 ```
  docker run -p 3000:3000 -d sallve-movies
 
 ```
-* This container will run in port 3000: http://localhost:3000/ !
 
+- This container will run in port 3000: http://localhost:3000/ !
 
 ## Technologies Used
-* JavaScript
-* React (with hooks)
-* HTML
-* Sass
-* Axios
-* PropTypes
-* Docker
-* Heroku
 
-
+- JavaScript
+- React (with hooks)
+- HTML
+- Sass
+- Axios
+- PropTypes
+- Docker
+- Heroku
